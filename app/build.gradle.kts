@@ -1,5 +1,6 @@
 plugins {
     id("application")
+    id("org.sonarqube") version "7.2.3.7755"
 }
 
 group = "hexlet.code"
@@ -11,6 +12,13 @@ repositories {
 
 application {
     mainClass.set("hexlet.code.App")
+}
+
+sonar {
+    properties {
+        property("sonar.projectKey", "Sibiryaq_java-project-61")
+        property("sonar.organization", "sibiryaq")
+    }
 }
 
 dependencies {
